@@ -97,7 +97,7 @@ function PageOne({}){
                     className='underline'
                 >
                     NEX-GDDP-CMIP6 dataset
-                </a>!
+                </a>
             </p>
         </div>
     );
