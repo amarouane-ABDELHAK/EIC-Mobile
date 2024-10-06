@@ -32,9 +32,8 @@ export const handleImageServiceRequest = async (event, variable, setChartData, s
     }),
   };
 
-  const token = process.env.GIS_TOKEN;
-
   try {
+    const token = import.meta.env.VITE_GIS_TOKEN;
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: {
