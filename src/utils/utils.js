@@ -37,7 +37,7 @@ export const handleImageServiceRequest = async (event, variable, setChartData, s
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'X-Esri-Authorization': `Bearer ${token}`,
         'Referer': 'https://earthdata.gov',
       }
     });
