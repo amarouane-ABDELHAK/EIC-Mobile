@@ -34,11 +34,12 @@ export const handleImageServiceRequest = async (event, variable, setChartData, s
 
   try {
     const token = import.meta.env.VITE_GIS_TOKEN ?? '';
+    const referer = import.meta.env.VITE_REFERER ?? 'https://earth.gov';
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: {
         'X-Esri-Authorization': `Bearer ${token}`,
-        'Referer': 'https://earthdata.gov',
+        'Referer': `${referer}`,
       }
     });
     const results = await response.json();
